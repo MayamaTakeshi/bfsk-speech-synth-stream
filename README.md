@@ -20,7 +20,7 @@ Then you can try this code:
 ```
 const Speaker = require('speaker')
 
-const BfskSpeechSynthStream = require('./index.js')
+const BfskSpeechSynthStream = require('bfsk-speech-synth-stream')
 const BfskSpeechRecogStream = require('bfsk-speech-recog-stream')
 
 const zero_freq = 500
