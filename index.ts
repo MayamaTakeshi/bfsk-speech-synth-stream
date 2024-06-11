@@ -2,7 +2,7 @@ const stream = require("stream")
 
 const { EventEmitter } = require("events")
 
-const { ToneStream, utils } = require("tone-stream")
+const { ToneStream, utils, ssml } = require("tone-stream")
 
 type Format = {
   audioFormat: number,
@@ -71,7 +71,10 @@ class BfskSpeechSynthStream extends ToneStream {
   }
 
   enqueue(text: string) {
-    const tones = utils.gen_binary_tones_from_text(text, this.tone_duration, this.zero_freq, this.one_freq, this.sampleRate)
+    const gen_tones = (sampleRate: number, text: string, duration: number) => {
+      return utils.gen_binary_tones_from_text(text, duration, this.zero_freq, this.one_freq, sampleRate)
+    }
+    const tones = ssml.process(this.sampleRate, text, gen_tones, this.tone_duration)
     this.concat(tones)
     this.add([100, 's'])
   }
