@@ -1,0 +1,43 @@
+{
+  "name": "bfsk-speech-synth-stream",
+  "version": "1.1.0",
+  "description": "A node.js module implementing a readable audio stream that generates Binary FSK (Frequency-shift keying) for testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MayamaTakeshi/bfsk-speech-synth-stream.git"
+  },
+  "keywords": [
+    "Binary",
+    "FSK",
+    "Frequency-shift",
+    "keying",
+    "testing"
+  ],
+  "author": "MayamaTakeshi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MayamaTakeshi/bfsk-speech-synth-stream/issues"
+  },
+  "homepage": "https://github.com/MayamaTakeshi/bfsk-speech-synth-stream#readme",
+  "dependencies": {
+    "tone-stream": "^1.15.0"
+  },
+  "devDependencies": {
+    "@mayama/audio-utils": "^1.2.0",
+    "@types/node": "^20.14.2",
+    "speaker": "^0.5.5",
+    "bfsk-speech-recog-stream": "^1.1.0",
+    "typescript": "^5.4.5",
+    "wav": "^1.0.2"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ]
+}
