@@ -63,7 +63,7 @@ class BfskSpeechSynthStream extends ToneStream {
       this.params.times--
       //console.log("times", this.params.times)
       if(this.params.times > 0) {
-        this.enqueue(this.params)
+        this.enqueue(this.params.text)
       }
     })
 
